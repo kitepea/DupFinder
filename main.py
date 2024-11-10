@@ -22,11 +22,29 @@ def find_duplicates(file_path, accuracy):
     return duplicates
 
 
+# Function to center the window on the screen
+def center_window(window, width, height):
+    # Get the screen width and height
+    screen_width = window.winfo_screenwidth()
+    screen_height = window.winfo_screenheight()
+
+    # Calculate the position to center the window
+    x_position = (screen_width - width) // 2
+    y_position = (screen_height - height) // 2
+
+    # Set the geometry to center the window
+    window.geometry(f"{width}x{height}+{x_position}+{y_position}")
+
+
 # Function to display the results
 def display_results(result):
     result_window = tk.Toplevel(root)
     result_window.title("Results")
-    result_window.geometry("700x500")
+    
+    # Set the result window size and center it
+    window_width = 700
+    window_height = 500
+    center_window(result_window, window_width, window_height)
 
     # Create a text box with large font size and line spacing
     text = tk.Text(result_window, font=("Arial", 10), spacing1=10, wrap="word")
@@ -73,7 +91,11 @@ def open_github_link(event):
 # Tkinter interface
 root = tk.Tk()
 root.title("Duplicate Finder")
-root.geometry("400x315")
+
+# Set the main window size and center it
+window_width = 400
+window_height = 315
+center_window(root, window_width, window_height)
 
 # Choose data file
 file_path = tk.StringVar()
