@@ -6,8 +6,7 @@
 
 ### 1. Create a Virtual Environment in VS Code
 
-1. Press `Ctrl+Shift+P`, type `Python: Create Environment`, and select `venv`.
-2. VS Code will create a `venv` folder in your project.
+Press `Ctrl+Shift+P`, type `Python: Create Environment`, and select `venv`.
 
 ### 2. Install Dependencies
 
@@ -26,8 +25,7 @@ python main.py
 
 ### 4. Create Standalone Executable
 
-1. Ensure the virtual environment is active.
-2. Run PyInstaller:
+In active virtual environment, run PyInstaller:
    ```bash
    pyinstaller --onefile --noconsole main.py
    ```
