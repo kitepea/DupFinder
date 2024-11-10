@@ -1,0 +1,11 @@
+.venv/
+env/
+
+dist/
+build/
+
+.DS_Store   # macOS
+Thumbs.db   # Windows
+
+*.docx
+*.spec
